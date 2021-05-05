@@ -3,11 +3,12 @@ import Date from './Date';
 import Card from './Card';
 function ExpensesItem(props){
     const clickHandle=()=>{
-        console.log("Clicked..!!");
+        console.log("Hello");
     }
+  
     return (
     <Card className="expense-item">
-        <div><Date date={props.date}/> </div>
+        <div ><Date date={props.date}/> </div>
         &nbsp;&nbsp;&nbsp;
         <div className="expense-item__description">{props.title}</div>
         
