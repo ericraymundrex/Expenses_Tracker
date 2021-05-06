@@ -8,12 +8,12 @@ function ExpensesItem(props){
     console.log(useState(props.title))
     const [title,setTitle]=useState(props.title);
     const clickHandle=()=>{
-        setTitle("I shuck");
-        console.log(title);
+        setTitle(" is Clicked");
     }
-  
+    
     return (
     <Card className="expense-item">
+        
         <div ><Date date={props.date}/> </div>
         &nbsp;&nbsp;&nbsp;
         <div className="expense-item__description">{title}</div>

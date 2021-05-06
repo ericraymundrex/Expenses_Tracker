@@ -1,10 +1,19 @@
+import ExpenseForm from './ExpensesForm';
 import './NewExpense.css';
-import ExpenseForm from  './ExpensesForm';
 
-const NewExpenses=()=>{
+const NewExpenses=(props)=>{
+    const saveExpenseDate=(expensesData)=>{
+        const expenseDateentered={
+            ...expensesData
+        } 
+        props.onSave(expenseDateentered);
+    }
+    
     return(
-        <div className="new-expense">
-            <ExpenseForm/>
+        <div>
+            <div className="new-expense">
+                <ExpenseForm onSaveExpenseDate={saveExpenseDate}/>
+            </div>
         </div>
     );
 }
