@@ -1,10 +1,14 @@
+import {useState} from 'react';
 import './ExpensesForm.css';
 const ExpensesForm=()=>{
+    const [enteredTitle,setTitle]=useState(' ');
     const titleHandle=(event)=>{
-        console.log(event.target.value);
+        setTitle(event.target.value);
+        console.log(enteredTitle);
     }
+    const submitHandler=()=>{}
     return( 
-        <form>
+        <form onSubmit="{submitHandler}">
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title : </label>
